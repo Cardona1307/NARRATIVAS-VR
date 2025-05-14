@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 /// <summary>
 /// An interactable knob that follows the rotation of the interactor
 /// </summary>
-public class XRKnob : UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable
+public class XRKnob : XRBaseInteractable
 {
     [Tooltip("The transform of the visual component of the knob")]
     public Transform knobTransform = null;
@@ -28,7 +28,7 @@ public class XRKnob : UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInt
     public float Value { get; private set; } = 0.0f;
     public float Angle { get; private set; } = 0.0f;
 
-    private UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor selectInteractor = null;
+    private IXRSelectInteractor selectInteractor = null;
     private Quaternion selectRotation = Quaternion.identity;
 
     private void Start()

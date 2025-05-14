@@ -1,8 +1,8 @@
 ﻿using UnityEditor;
-
+using UnityEditor.XR.Interaction.Toolkit;
 
 [CustomEditor(typeof(XRJoystick))]
-public class XRJoystickEditor : UnityEditor.XR.Interaction.Toolkit.Interactables.XRBaseInteractableEditor
+public class XRJoystickEditor : XRBaseInteractableEditor
 {
     private SerializedProperty rateOfChange = null;
     private SerializedProperty leverType = null;
